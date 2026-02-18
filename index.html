@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Dash - OreateAI Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="scoreBoard">Puntuación: <span id="score">0</span></div>
+
+<div id="gameArea">
+
+    <div id="startScreen">
+        <h1>NEON DASH</h1>
+        <p>Usa las Flechas Izquierda/Derecha</p>
+        <p>¡Esquiva los rojos!</p>
+
+        <button onclick="startGame()">JUGAR AHORA</button>
+        <button onclick="showLeaderboard()">VER LÍDERES</button>
+    </div>
+
+    <!-- GAME OVER -->
+
+    <div id="gameOverScreen" class="hidden">
+
+        <h1 style="color:#ff2e63;">GAME OVER</h1>
+
+        <p>Tu Puntuación Final: <span id="finalScore">0</span></p>
+
+        <!-- INPUT NOMBRE -->
+        <input id="playerName" placeholder="Tu nombre" />
+
+        <br><br>
+
+        <!-- GUARDAR -->
+        <button onclick="saveScore()">Guardar puntuación</button>
+
+        <br><br>
+
+        <!-- REINTENTAR -->
+        <button onclick="startGame()">REINTENTAR</button>
+
+    </div>
+
+    <!-- LEADERBOARD -->
+
+    <div id="leaderboardScreen" class="hidden">
+        <h2>MEJORES PUNTUACIONES</h2>
+        <ol id="leaderboardList"></ol>
+        <button onclick="hideLeaderboard()">VOLVER</button>
+    </div>
+
+    <div id="player"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
